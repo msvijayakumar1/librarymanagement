@@ -14,16 +14,16 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar></Navbar>
+        <Navbar/>
 
         <Routes>
-          <Route exact path="/" component={Home}></Route>
-          <Route exact path="/about" component={About}></Route>
-          <Route exact path="/contact" component={Contact}></Route>
-          <Route exact path="/books/add" component={AddBook} />
-          <Route exact path="/books/edit/:id" component={EditBook} />
-          <Route exact path="/books/:id" component={ViewBook} />
-          <Route component={NotFound}></Route>
+          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/about" element={<About/>}/>
+          <Route exact path="/contact" element={<Contact/>}/>
+          <Route exact path="/books/add" element={<AddBook/>} />
+          <Route exact path="/books/edit/:id" element={<EditBook/>}/>
+          <Route exact path="/books/:id" element={<ViewBook/>} />
+          <Route element={<NotFound/>}/>
         </Routes>
       </div>
     </Router>

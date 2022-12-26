@@ -5,11 +5,9 @@ import { Link } from 'react-router-dom';
 import { GrFormView } from 'react-icons/gr';
 import { MdDelete, MdModeEdit } from 'react-icons/md';
 
-const Home = () => {
+function Home(){
   const [books, setBooks] = useState([]);
-  useEffect(()=>{
-     loadBooks()
-  },)
+ 
 
   const loadBooks = async () => {
     const result = await axios.get('https://63a3086c9704d18da083be0e.mockapi.io/books');
@@ -29,7 +27,7 @@ const Home = () => {
   return (
     <div className="container">
       <div className="py-4">
-        <h1 className="text-center mb-4 ">Welcome to XYZ Library</h1>
+        <h1 className="text-center mb-4 ">Welcome to Library</h1>
         <table className="table border shadow align-middle">
           <thead className="table-dark">
             <tr>
